@@ -1,0 +1,167 @@
+Final Project
+
+Programming Fundamentals course
+
+Rashen Thao
+Personal Workout Program
+
+
+PROBLEM STATEMENT
+Create an algorithm that asks the user for their fitness goal and level, recommends a workout based on their
+input, and generates a fitness plan for a specified number of days. The plan alternates between workout days
+and rest days and displays the full schedule in the browser.
+  
+Nouns: Algorithm, Fitness Goal, Workout, Plan, Days, Schedule, Browser
+  
+Verbs: Create, Ask, Recommend, Generate, Display
+
+
+
+DEFINING DIAGRAM
+INPUTS:
+  Fitness goal
+  Fitness level
+  Number of days for the fitness plan
+  
+PROCESSING:
+  Prompt the user for their fitness goal (lose weight, gain muscle, or improve endurance).
+  Prompt the user for their fitness level (beginner, intermediate, advanced).
+  Recommend a workout based on the fitness goal and level using criteria.
+  Prompt the user for the number of days for the fitness plan.
+  Generate a fitness plan switching between workout days and rest days using a loop.
+  Store and format the generated plan.
+  
+OUTPUTS:
+  Recommended workout based on the fitness goal and level.
+  A structured fitness plan displaying workout and rest days for the specified number of days.
+
+
+
+SOLUTION ALGORITHM
+personalizeFitnessProgram
+  Prompt user for fitnessGoal.
+  Prompt user for fitnessLevel.
+	
+  Determine recommended workout based on fitnessGoal and fitnessLevel using predefined criteria.
+  Prompt user for the number of days, numDays.
+  Initialize counter to 1.
+	
+  WHILE counter <= numDays
+  IF counter is odd
+    Add "Day counter: (Recommended workout)" to the fitness plan.
+  ELSE:
+    Add "Day counter: Rest Day" to the fitness plan.
+    Increment counter by 1.
+  ENDWHILE
+	
+  Output fitnessGoal, fitnessLevel, and the generated fitness plan message.
+END
+
+
+
+TEST PLANS
+TEST CASE 1:
+  INPUT VALUES:
+    lose weight
+    beginner
+    5
+
+  EXPECTED RESULT:
+    Fitness Goal: lose weight
+    Fitness Level: beginner
+    Workout Recommendation: 30 minutes of brisk walking and light exercises.
+
+    Your Fitness Plan:
+    Day 1: 30 minutes of brisk walking and light exercises.
+    Day 2: Rest Day
+    Day 3: 30 minutes of brisk walking and light exercises.
+    Day 4: Rest Day
+    Day 5: 30 minutes of brisk walking and light exercises.
+
+  ACTUAL RESULT:
+    Fitness Goal: lose weight
+    Fitness Level: beginner
+    Workout Recommendation: 30 minutes of brisk walking and light exercises.
+
+    Your Fitness Plan:
+    Day 1: 30 minutes of brisk walking and light exercises.
+    Day 2: Rest Day
+    Day 3: 30 minutes of brisk walking and light exercises.
+    Day 4: Rest Day
+    Day 5: 30 minutes of brisk walking and light exercises.
+
+TEST CASE 2:
+  INPUT VALUES:
+    gain muscle
+    intermediate
+    7
+
+  EXPECTED RESULT:
+    Fitness Goal: gain muscle
+    Fitness Level: intermediate
+    Workout Recommendation: Push-ups, squats, planks, and lunges for an hour.
+
+    Your Fitness Plan:
+    Day 1: Push-ups, squats, planks, and lunges for an hour.
+    Day 2: Rest Day
+    Day 3: Push-ups, squats, planks, and lunges for an hour.
+    Day 4: Rest Day
+    Day 5: Push-ups, squats, planks, and lunges for an hour.
+    Day 6: Rest Day
+    Day 7: Push-ups, squats, planks, and lunges for an hour.
+
+  ACTUAL RESULT:
+    Fitness Goal: gain muscle
+    Fitness Level: intermediate
+    Workout Recommendation: Push-ups, squats, planks, and lunges for an hour.
+
+    Your Fitness Plan:
+    Day 1: Push-ups, squats, planks, and lunges for an hour.
+    Day 2: Rest Day
+    Day 3: Push-ups, squats, planks, and lunges for an hour.
+    Day 4: Rest Day
+    Day 5: Push-ups, squats, planks, and lunges for an hour.
+    Day 6: Rest Day
+    Day 7: Push-ups, squats, planks, and lunges for an hour.
+
+TEST CASE 3:
+  INPUT VALUES:
+    improve endurance
+    advanced
+    5
+	
+  EXPECTED RESULT:
+   Fitness Goal: improve endurance
+   Fitness Level: advanced
+   Workout Recommendation: 2 hours of brisk walking, jogging, swimming, or biking with high-intensity interval training (HIIT).
+
+   Your Fitness Plan:
+   Day 1: 2 hours of brisk walking, jogging, swimming, or biking with high-intensity interval training (HIIT).
+   Day 2: Rest Day
+   Day 3: 2 hours of brisk walking, jogging, swimming, or biking with high-intensity interval training (HIIT).
+   Day 4: Rest Day
+   Day 5: 2 hours of brisk walking, jogging, swimming, or biking with high-intensity interval training (HIIT).
+
+  ACTUAL RESULT:
+   Fitness Goal: improve endurance
+   Fitness Level: advanced
+   Workout Recommendation: 2 hours of brisk walking, jogging, swimming, or biking with high-intensity interval training (HIIT).
+
+   Your Fitness Plan:
+   Day 1: 2 hours of brisk walking, jogging, swimming, or biking with high-intensity interval training (HIIT).
+   Day 2: Rest Day
+   Day 3: 2 hours of brisk walking, jogging, swimming, or biking with high-intensity interval training (HIIT).
+   Day 4: Rest Day
+   Day 5: 2 hours of brisk walking, jogging, swimming, or biking with high-intensity interval training (HIIT).
+
+TEST CASE 4:
+  INPUT VALUES:
+    whatever
+    ?
+
+  EXPECTED RESULT:
+    Write the correct input.
+
+  ACTUAL RESULT:
+    Write the correct input.
+
