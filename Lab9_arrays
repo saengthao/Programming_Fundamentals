@@ -1,0 +1,231 @@
+<!DOCTYPE html>  
+<html lang="en-US"> 
+  <head>
+    <meta charset="utf-8">
+
+    <title>Lab 09: Arrays</title>
+    <link rel="stylesheet" href="../resources/css/style.css" media="screen">
+    <link rel="stylesheet" href="../resources/css/print.css" media="print">
+    <script src="../resources/lib/jquery/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="../resources/lib/highlight/styles/default.css">
+    <script src="../resources/lib/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head> 
+  
+  <body>
+    <section class="container">
+      <header>
+        <h1>Programming Fundamentals</h1>
+        <h2><a href="../index.html">Unit 6: Loops, Functions, and Data Structures</a></h2>
+      </header>
+      
+      <main>
+
+        <h2>Lab 09: Arrays</h2>
+
+        <h4>File: unit6/labs/lab09arrays.html</h4>
+
+        <h3>Student Information</h3>
+
+        <ul>
+          <li>Name: Rashen Thao</li>
+        </ul>
+
+        <h3>Lab Steps</h3>
+        <ol>
+          <li>Open this file in Firefox and Notepad++.</li>
+          <li>Add your name in the appropriate place.</li>
+          <li>Read the problem statement.</li>
+          <li>Complete the "Nouns and Verbs" section.</li>
+          <li>Complete the "Defining Diagram" section.</li>
+          <li>Complete the "Solution Algorithm" section.</li>
+          <li>Complete the "Checking the Solution Algorithm" section.</li>
+          <li>Now open the file <strong>unit6/labs/js/lab09arrays.js </strong>in Notepad++</li>
+          <li>In that JavaScript file, write a JavaScript program in the function <strong>lab09arrays</strong> that addresses the problem statement.
+            <ol>
+              <li>Your output should look like the <strong>Example Output</strong> at the bottom of the lab.</li>
+              <li>Remember to follow all coding standards and add appropriate comments!</li>
+            </ol>
+          </li>
+          <li>Test everything. How many test plans do you need to completely test this?</li>
+        </ol>
+
+        <h3>Lab Problem Statement</h3>
+        <blockquote>
+          <p><strong><em>Write a program that asks for student usernames. Collect student usernames until the user enters &quot;done&quot;. Once all the data has been gathered, the program should display the total number of records you collected. It should then convert the usernames to student email addresses (by appending @student.cvtc.edu&quot;) and display the converted addresses in a list as shown in the example output.</em></strong></p>
+        </blockquote>
+        <p>You'll use both FOR and WHILE loops in this problem, as well as an IF statement. You'll use an <strong>array</strong> to store the usernames.</p>
+
+        <h3>1. Nouns and Verbs</h3>
+        <ul>
+          <li>Copy the above problem statement and paste it below so it appears in the black box when you refresh the page, underneath the words <code class="varname">PROBLEM STATEMENT</code>.</li>
+          <li>Identify the nouns and verbs in the problem statement and write them in the appropriate locations so they appear in the black box below when you refresh the page.</li>
+        </ul>
+
+<pre class="pseudocode">
+PROBLEM STATEMENT: Write a program that asks for student usernames. Collect student usernames
+until the user enters "done". Once all the data has been gathered, the program should display
+the total number of records you collected. It should then convert the usernames to student
+email addresses (by appending @student.cvtc.edu") and display the converted addresses in a list
+as shown in the example output.
+
+Nouns: Usernames, Email addresses, Records, List
+
+Verbs: Write, Ask, Collect, Enter, Display, Convert, Append
+</pre>
+
+        <h3>2. Defining Diagram</h3>
+        <ul>
+          <li>Convert the nouns and verbs into variable names and processes and create a defining diagram.</li>
+          <li>Make your variable names <strong>valid JavaScript names</strong> that conform to the course JavaScript Coding Standards.</li>
+          <li>Write down the processes with very short statements, 2 or 3 words. Remember, this is not pseudocode. This is just the process.</li>
+        </ul>
+
+<pre class="pseudocode">
+INPUTS:
+  usernames
+
+PROCESSING:
+  Initialize array to usernames
+  Use WHILE loop
+  Prompt user to enter usernames
+  If usernames is entered, append to array
+  Calculate the total number of usernames entered
+  If enter done, end loop
+  Use FOR loop
+  convert usernames to email address
+  
+OUTPUTS:
+  Display usernames collected
+</pre>
+
+        <h3>3. Solution Algorithm</h3>
+        <ul>
+          <li>Create a solution algorithm (using Pseudocode) based on the defining diagram. Remember to give your algorithm a name and use proper indentation.</li>
+          <li>Ensure you include an appropriate level of detail for your input, processing, and output logic.</li>
+        </ul>
+
+<pre class="pseudocode">
+collectStudentUsernames
+  initialize usernames to array
+  
+  WHILE true
+    prompt user for usernames
+    if user enter usernames, add to array
+    if enter "done", end the loop
+  END WHILE
+
+  FOR total number of usernames in array
+  append @student.cvtc.edu to usernames
+  
+  output each usernames
+END
+</pre>
+
+        <h3>4. Checking the Solution Algorithm</h3>
+        <ul>
+          <li>Create a test plan for the algorithm.
+            <ul>
+              <li>Don't forget to fill in the <strong>VARIABLES</strong> section! That's easy to miss!</li>
+            </ul>
+          </li>
+          <li>Have <b>at least 3 test cases</b> that test different inputs and outputs. </li>
+        </ul>
+
+<pre class="pseudocode">
+VARIABLES:
+
+TEST CASE 1:
+
+  INPUT VALUES:
+	rthao01
+	nuluu92
+
+  EXPECTED RESULT:
+	You entered 2 usernames. Here are the email addresses:
+
+	rthao01@student.cvtc.edu
+	nuluu92@student.cvtc.edu
+
+  ACTUAL RESULT:
+	You entered 2 usernames. Here are the email addresses:
+
+	rthao01@student.cvtc.edu
+	nuluu92@student.cvtc.edu
+
+TEST CASE 2:
+
+  INPUT VALUES:
+	uroi01
+
+  EXPECTED RESULT:
+	You entered 1 usernames. Here are the email addresses:
+
+	uroi01@student.cvtc.edu
+
+  ACTUAL RESULT:
+	You entered 1 usernames. Here are the email addresses:
+
+	uroi01@student.cvtc.edu
+
+TEST CASE 3:
+
+  INPUT VALUES:
+	cowgoesmoo
+	chickensandwich
+	jellyisblue
+
+  EXPECTED RESULT:
+	You entered 3 usernames. Here are the email addresses:
+
+	cowsgoesmoo@student.cvtc.edu
+	chickensandwich@student.cvtc.edu
+	jellyisblue@student.cvtc.edu
+
+  ACTUAL RESULT:
+	You entered 3 usernames. Here are the email addresses:
+
+	cowsgoesmoo@student.cvtc.edu
+	chickensandwich@student.cvtc.edu
+	jellyisblue@student.cvtc.edu
+	
+</pre>
+        <h3>5. JavaScript Program</h3>
+        <ul>
+          <li>Write the JavaScript code based on everything you've done.</li>
+          <li>You will need to follow the coding standards for the course.</li>
+          <li>Once everything is working, go back and <strong>fill in</strong> the actual results sections in the test plan.</li>
+        </ul>
+
+        <h3>Example Output</h3>
+
+<pre class="output">
+You entered 3 usernames. Here are the email addresses:
+
+homer@student.cvtc.edu
+bart@student.cvtc.edu
+marge@student.cvtc.edu
+</pre>
+
+        <h3>Your Output:</h3>
+
+<pre class="output">
+<script src="js/lab09arrays.js"></script>
+</pre>
+
+        <h2>What You Did</h2>
+        <p>You combined arrays, IF statements, counted, and uncounted loops to solve a more complex problem.</p>
+
+        <p><a href="../arraysAndHashes.html">Back</a></p>
+
+      </main>
+      
+      <footer>
+        <p>
+          Latest Version: 1.2304
+        </p>
+      </footer>
+
+   </section>
+ </body>
+</html>
